@@ -667,11 +667,32 @@ final class Oops_Functions {
 	 */
 	function enqueue_scripts() {
 
+		// Dequeue styles.
+		if ( ! is_admin() ) {
+			wp_dequeue_style( 'wp-block-library' );
+		}
+
 		// Add custom fonts, used in the main stylesheet.
 		wp_enqueue_style( 'ccdzen-fonts', $this::fonts_url(), [], null );
 
-		// Theme stylesheet.
-		wp_enqueue_style( 'ccdzen-style', get_stylesheet_uri() );
+		// Google fonts.
+		// wp_enqueue_style( 'bs-theme-google-fonts', 'add-url-here', [], '', 'screen' );
+
+		/**
+		 * Theme sylesheet
+		 *
+		 * This enqueues the minified stylesheet compiled from SASS (.scss) files.
+		 * The main stylesheet, in the root directory, only contains the theme header but
+		 * it is necessary for theme activation. DO NOT delete the main stylesheet!
+		 */
+		wp_enqueue_style( 'ccdzen', get_theme_file_uri( '/assets/css/style.min.css' ), [], '' );
+
+		// Block styles.
+		if ( function_exists( has_blocks() ) ) {
+			if ( has_blocks() ) {
+				wp_enqueue_style( 'ccdzen-blocks', get_theme_file_uri( '/assets/css/blocks.min.css' ), [ 'bs-theme' ], '' );
+			}
+		}
 
 		// Load the dark colorscheme.
 		if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
@@ -687,6 +708,9 @@ final class Oops_Functions {
 		// Load the Internet Explorer 8 specific stylesheet.
 		wp_enqueue_style( 'ccdzen-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), [ 'ccdzen-style' ], '1.0' );
 		wp_style_add_data( 'ccdzen-ie8', 'conditional', 'lt IE 9' );
+
+		// Print styles.
+		wp_enqueue_style( 'bs-print', get_theme_file_uri( '/assets/css/print.min.css' ), [], '', 'print' );
 
 		// Load the html5 shiv.
 		wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), [], '3.7.3' );
