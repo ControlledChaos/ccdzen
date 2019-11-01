@@ -8,4 +8,4 @@ WordPress theme for the Controlled Chaos Design website.
 ![ACF Pro Ready](https://img.shields.io/badge/ACF%20Pro-ready-00d3ae.svg?style=flat-square)
 ![Gutenberg Ready](https://img.shields.io/badge/Gutenberg-ready-00a0d2.svg?style=flat-square)
 
-![CCDzen theme image contains the theme name and author, a zen garden with groomed sand, and a rock.](https://raw.githubusercontent.com/ControlledChaos/ccdzen/master/ccdzen-theme-image-01.jpg)
+![CCDzen theme image contains the theme name and author, a zen garden with groomed sand, and a rock.](https://raw.githubusercontent.com/ControlledChaos/ccdzen/master/screenshot.jpg)
