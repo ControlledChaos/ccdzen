@@ -709,9 +709,6 @@ final class Oops_Functions {
 		wp_enqueue_style( 'ccdzen-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), [ 'ccdzen-style' ], '1.0' );
 		wp_style_add_data( 'ccdzen-ie8', 'conditional', 'lt IE 9' );
 
-		// Print styles.
-		wp_enqueue_style( 'bs-print', get_theme_file_uri( '/assets/css/print.min.css' ), [], '', 'print' );
-
 		// Load the html5 shiv.
 		wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), [], '3.7.3' );
 		wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
