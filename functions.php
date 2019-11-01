@@ -179,29 +179,19 @@ final class Oops_Functions {
 	 */
 	private function dependencies() {
 
-		/**
-		 * Implement the Custom Header feature.
-		 */
+		// Implement the Custom Header feature.
 		require get_theme_file_path( '/includes/custom-header.php' );
 
-		/**
-		 * Custom template tags for this theme.
-		 */
+		// Custom template tags for this theme.
 		require get_theme_file_path( '/includes/template-tags.php' );
 
-		/**
-		 * Additional features to allow styling of the templates.
-		 */
+		// Additional features to allow styling of the templates.
 		require get_theme_file_path( '/includes/template-functions.php' );
 
-		/**
-		 * Customizer additions.
-		 */
+		// Customizer additions.
 		require get_theme_file_path( '/includes/customizer.php' );
 
-		/**
-		 * SVG icons functions and filters.
-		 */
+		// SVG icons functions and filters.
 		require get_theme_file_path( '/includes/icon-functions.php' );
 
 	}
