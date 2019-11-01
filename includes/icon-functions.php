@@ -167,8 +167,6 @@ final class Oops_Icons {
 		* Display the icon.
 		*
 		* The whitespace around `<use>` is intentional - it is a work around to a keyboard navigation bug in Safari 10.
-		*
-		* See https://core.trac.wordpress.org/ticket/38387.
 		*/
 		$svg .= ' <use href="#icon-' . esc_html( $args['icon'] ) . '" xlink:href="#icon-' . esc_html( $args['icon'] ) . '"></use> ';
 

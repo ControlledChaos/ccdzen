@@ -2977,8 +2977,7 @@ acf_log( acf_get_post_id_info('options') );
 /*
 *  acf_isset_termmeta
 *
-*  This function will return true if the termmeta table exists
-*  https://developer.wordpress.org/reference/functions/get_term_meta/
+*  This function will return true if the termmeta table exists.
 *
 *  @type	function
 *  @date	3/09/2016

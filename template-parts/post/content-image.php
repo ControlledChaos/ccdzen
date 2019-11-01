@@ -2,8 +2,6 @@
 /**
  * Template part for displaying image posts
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
  * @package WordPress
  * @subpackage Twenty_Seventeen_Oops
  * @since 1.0

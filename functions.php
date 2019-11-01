@@ -4,8 +4,6 @@
  *
  * Based on the CCDzen theme.
  *
- * @link       https://wordpress.org/themes/ccdzen/
- *
  * @package    WordPress
  * @subpackage Twenty_Seventeen_Oops
  * @since      1.0.0
@@ -272,8 +270,6 @@ final class Oops_Functions {
 
 		/**
 		 * Enable support for Post Formats.
-		 *
-		 * See: https://codex.wordpress.org/Post_Formats
 		 */
 		add_theme_support(
 			'post-formats', [

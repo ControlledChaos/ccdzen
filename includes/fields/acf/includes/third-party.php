@@ -30,18 +30,18 @@ class acf_third_party {
 	
 	function __construct() {
 		
-		// Tabify Edit Screen - http://wordpress.org/extend/plugins/tabify-edit-screen/
+		// Tabify Edit Screen.
 		if( class_exists('Tabify_Edit_Screen') ) {
 			add_filter('tabify_posttypes',			array($this, 'tabify_posttypes'));
 			add_action('tabify_add_meta_boxes',		array($this, 'tabify_add_meta_boxes'));
 		}
 		
-		// Post Type Switcher - http://wordpress.org/extend/plugins/post-type-switcher/
+		// Post Type Switcher.
 		if( class_exists('Post_Type_Switcher') ) {
 			add_filter('pts_allowed_pages', array($this, 'pts_allowed_pages'));
 		}
 		
-		// Event Espresso - https://wordpress.org/plugins/event-espresso-decaf/
+		// Event Espresso.
 		if( function_exists('espresso_version') ) {
 			add_filter('acf/get_post_types', array($this, 'ee_get_post_types'), 10, 2);
 		}

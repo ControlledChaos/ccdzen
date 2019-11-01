@@ -343,8 +343,7 @@ class acf_form_nav_menu {
 	$('#post-body-content').append( $('#tmpl-acf-menu-settings').html() );
 	
 	
-	// avoid WP over-writing $_POST data
-	// - https://core.trac.wordpress.org/ticket/41502#ticket
+	// avoid WP over-writing $_POST data.
 	$(document).on('submit', '#update-nav-menu', function() {
 
 		// vars

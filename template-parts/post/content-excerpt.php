@@ -4,8 +4,6 @@
  *
  * Used in Search Results and for Recent Posts in Front Page panels.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
  * @package WordPress
  * @subpackage Twenty_Seventeen_Oops
  * @since 1.0
