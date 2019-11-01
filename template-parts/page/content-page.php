@@ -23,7 +23,7 @@
 
 			wp_link_pages(
 				[
-					'before' => '<div class="page-links">' . __( 'Pages:', 'twentyseventeen-oops' ),
+					'before' => '<div class="page-links">' . __( 'Pages:', 'ccdzen' ),
 					'after'  => '</div>',
 				]
 			);

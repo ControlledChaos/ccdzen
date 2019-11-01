@@ -87,7 +87,7 @@ final class Oops_Custom_Header {
 		 */
 		add_theme_support(
 			'custom-header', apply_filters(
-				'twentyseventeen_custom_header_args', [
+				'ccdzen_custom_header_args', [
 					'default-image'    => get_theme_file_uri( '/assets/images/header.jpg' ),
 					'width'            => 2000,
 					'height'           => 1200,
@@ -103,7 +103,7 @@ final class Oops_Custom_Header {
 				'default-image' => [
 					'url'           => '%s/assets/images/header.jpg',
 					'thumbnail_url' => '%s/assets/images/header.jpg',
-					'description'   => __( 'Default Header Image', 'twentyseventeen-oops' ),
+					'description'   => __( 'Default Header Image', 'ccdzen' ),
 				],
 			]
 		);
@@ -150,10 +150,10 @@ final class Oops_Custom_Header {
 	 * @param  array $settings Video settings.
 	 * @return array The filtered video settings.
 	 */
-	public function twentyseventeen_video_controls( $settings ) {
+	public function ccdzen_video_controls( $settings ) {
 
-		$settings['l10n']['play']  = '<span class="screen-reader-text">' . __( 'Play background video', 'twentyseventeen-oops' ) . '</span>' . Oops_Icons::get_svg( array( 'icon' => 'play' ) );
-		$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __( 'Pause background video', 'twentyseventeen-oops' ) . '</span>' . Oops_Icons::get_svg( array( 'icon' => 'pause' ) );
+		$settings['l10n']['play']  = '<span class="screen-reader-text">' . __( 'Play background video', 'ccdzen' ) . '</span>' . Oops_Icons::get_svg( array( 'icon' => 'play' ) );
+		$settings['l10n']['pause'] = '<span class="screen-reader-text">' . __( 'Pause background video', 'ccdzen' ) . '</span>' . Oops_Icons::get_svg( array( 'icon' => 'pause' ) );
 
 		return $settings;
 
@@ -168,11 +168,11 @@ final class Oops_Custom_Header {
  * @access public
  * @return object Returns an instance of the class.
  */
-function oops_custom_header() {
+function ccdzen_custom_header() {
 
 	return Oops_Custom_Header::instance();
 
 }
 
 // Run an instance of the class.
-oops_custom_header();
+ccdzen_custom_header();

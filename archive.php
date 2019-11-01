@@ -45,9 +45,9 @@ get_header(); ?>
 
 			the_posts_pagination(
 				array(
-					'prev_text'          => Oops_Icons::get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen-oops' ) . '</span>',
-					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen-oops' ) . '</span>' . Oops_Icons::get_svg( array( 'icon' => 'arrow-right' ) ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen-oops' ) . ' </span>',
+					'prev_text'          => Oops_Icons::get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'ccdzen' ) . '</span>',
+					'next_text'          => '<span class="screen-reader-text">' . __( 'Next page', 'ccdzen' ) . '</span>' . Oops_Icons::get_svg( array( 'icon' => 'arrow-right' ) ),
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'ccdzen' ) . ' </span>',
 				)
 			);
 

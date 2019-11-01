@@ -60,7 +60,7 @@ final class Oops_Tags {
 	 */
 	private function __construct() {
 
-		// Flush out the transients used in twentyseventeen_categorized_blog.
+		// Flush out the transients used in ccdzen_categorized_blog.
 		add_action( 'edit_category', [ $this, 'category_transient_flusher' ] );
 		add_action( 'save_post', [ $this, 'category_transient_flusher' ] );
 
@@ -78,7 +78,7 @@ final class Oops_Tags {
 		// Get the author name; wrap it in a link.
 		$byline = sprintf(
 			/* translators: %s: post author */
-			__( 'by %s', 'twentyseventeen-oops' ),
+			__( 'by %s', 'ccdzen' ),
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a></span>'
 		);
 
@@ -112,7 +112,7 @@ final class Oops_Tags {
 		// Wrap the time string in a link, and preface it with 'Posted on'.
 		return sprintf(
 			/* translators: %s: post date */
-			__( '<span class="screen-reader-text">Posted on</span> %s', 'twentyseventeen-oops' ),
+			__( '<span class="screen-reader-text">Posted on</span> %s', 'ccdzen' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
@@ -128,7 +128,7 @@ final class Oops_Tags {
 	public static function entry_footer() {
 
 		/* translators: used between list items, there is a space after the comma */
-		$separate_meta = __( ', ', 'twentyseventeen-oops' );
+		$separate_meta = __( ', ', 'ccdzen' );
 
 		// Get Categories for posts.
 		$categories_list = get_the_category_list( $separate_meta );
@@ -147,11 +147,11 @@ final class Oops_Tags {
 
 						// Make sure there's more than one category before displaying.
 					if ( $categories_list && Oops_Tags::categorized_blog() ) {
-						echo '<span class="cat-links">' . Oops_Icons::get_svg( [ 'icon' => 'folder-open' ] ) . '<span class="screen-reader-text">' . __( 'Categories', 'twentyseventeen-oops' ) . '</span>' . $categories_list . '</span>';
+						echo '<span class="cat-links">' . Oops_Icons::get_svg( [ 'icon' => 'folder-open' ] ) . '<span class="screen-reader-text">' . __( 'Categories', 'ccdzen' ) . '</span>' . $categories_list . '</span>';
 					}
 
 					if ( $tags_list && ! is_wp_error( $tags_list ) ) {
-						echo '<span class="tags-links">' . Oops_Icons::get_svg( [ 'icon' => 'hashtag' ] ) . '<span class="screen-reader-text">' . __( 'Tags', 'twentyseventeen-oops' ) . '</span>' . $tags_list . '</span>';
+						echo '<span class="tags-links">' . Oops_Icons::get_svg( [ 'icon' => 'hashtag' ] ) . '<span class="screen-reader-text">' . __( 'Tags', 'ccdzen' ) . '</span>' . $tags_list . '</span>';
 					}
 
 					echo '</span>';
@@ -182,7 +182,7 @@ final class Oops_Tags {
 		edit_post_link(
 			sprintf(
 				/* translators: %s: Name of current post */
-				__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen-oops' ),
+				__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'ccdzen' ),
 				get_the_title()
 			),
 			'<span class="edit-link">',
@@ -204,9 +204,9 @@ final class Oops_Tags {
 		if ( is_a( $partial, 'WP_Customize_Partial' ) ) {
 
 			// Find out the id and set it up during a selective refresh.
-			global $twentyseventeencounter;
+			global $ccdzencounter;
 			$id                     = str_replace( 'panel_', '', $partial->id );
-			$twentyseventeencounter = $id;
+			$ccdzencounter = $id;
 
 		}
 
@@ -225,7 +225,7 @@ final class Oops_Tags {
 		} elseif ( is_customize_preview() ) {
 
 			// The output placeholder anchor.
-			echo '<article class="panel-placeholder panel twentyseventeen-panel twentyseventeen-panel' . $id . '" id="panel' . $id . '"><span class="twentyseventeen-panel-title">' . sprintf( __( 'Front Page Section %1$s Placeholder', 'twentyseventeen-oops' ), $id ) . '</span></article>';
+			echo '<article class="panel-placeholder panel ccdzen-panel ccdzen-panel' . $id . '" id="panel' . $id . '"><span class="ccdzen-panel-title">' . sprintf( __( 'Front Page Section %1$s Placeholder', 'ccdzen' ), $id ) . '</span></article>';
 
 		}
 
@@ -240,7 +240,7 @@ final class Oops_Tags {
 	 */
 	public static function categorized_blog() {
 
-		$category_count = get_transient( 'twentyseventeen_categories' );
+		$category_count = get_transient( 'ccdzen_categories' );
 
 		if ( false === $category_count ) {
 
@@ -257,7 +257,7 @@ final class Oops_Tags {
 			// Count the number of categories that are attached to the posts.
 			$category_count = count( $categories );
 
-			set_transient( 'twentyseventeen_categories', $category_count );
+			set_transient( 'ccdzen_categories', $category_count );
 		}
 
 		// Allow viewing case of 0 or 1 categories in post preview.
@@ -270,7 +270,7 @@ final class Oops_Tags {
 	}
 
 	/**
-	 * Flush out the transients used in twentyseventeen_categorized_blog.
+	 * Flush out the transients used in ccdzen_categorized_blog.
 	 *
 	 * @since  1.0.0
 	 * @access public
@@ -282,7 +282,7 @@ final class Oops_Tags {
 			return;
 		}
 		// Like, beat it. Dig?
-		delete_transient( 'twentyseventeen_categories' );
+		delete_transient( 'ccdzen_categories' );
 
 	}
 
@@ -295,11 +295,11 @@ final class Oops_Tags {
  * @access public
  * @return object Returns an instance of the class.
  */
-function oops_tags() {
+function ccdzen_tags() {
 
 	return Oops_Tags::instance();
 
 }
 
 // Run an instance of the class.
-oops_tags();
+ccdzen_tags();

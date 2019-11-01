@@ -100,12 +100,12 @@ final class Oops_Icons {
 
 		// Make sure $args are an array.
 		if ( empty( $args ) ) {
-			return __( 'Please define default parameters in the form of an array.', 'twentyseventeen-oops' );
+			return __( 'Please define default parameters in the form of an array.', 'ccdzen' );
 		}
 
 		// Define an icon.
 		if ( false === array_key_exists( 'icon', $args ) ) {
-			return __( 'Please define an SVG icon filename.', 'twentyseventeen-oops' );
+			return __( 'Please define an SVG icon filename.', 'ccdzen' );
 		}
 
 		// Set defaults.
@@ -301,7 +301,7 @@ final class Oops_Icons {
 		 * @since  1.0.0
 		 * @param  array $social_links_icons Array of social links icons.
 		 */
-		return apply_filters( 'twentyseventeen_social_links_icons', $social_links_icons );
+		return apply_filters( 'ccdzen_social_links_icons', $social_links_icons );
 
 	}
 
@@ -314,11 +314,11 @@ final class Oops_Icons {
  * @access public
  * @return object Returns an instance of the class.
  */
-function oops_icons() {
+function ccdzen_icons() {
 
 	return Oops_Icons::instance();
 
 }
 
 // Run an instance of the class.
-oops_icons();
+ccdzen_icons();

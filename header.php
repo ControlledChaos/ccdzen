@@ -24,7 +24,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyseventeen-oops' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'ccdzen' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 
@@ -48,7 +48,7 @@
 	 */
 	if ( ( is_single() || ( is_page() && ! Oops_Templates::is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
 		echo '<div class="single-featured-image-header">';
-		echo get_the_post_thumbnail( get_queried_object_id(), 'twentyseventeen-featured-image' );
+		echo get_the_post_thumbnail( get_queried_object_id(), 'ccdzen-featured-image' );
 		echo '</div><!-- .single-featured-image-header -->';
 	endif;
 	?>

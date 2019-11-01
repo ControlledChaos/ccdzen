@@ -1,8 +1,8 @@
 <?php
 /**
- * Twenty Seventeen Oops! back compat functionality.
+ * CCDzen back compat functionality.
  *
- * Prevents Twenty Seventeen Oops! from running on WordPress versions prior to 4.7,
+ * Prevents CCDzen from running on WordPress versions prior to 4.7,
  * since this theme is not meant to be backward compatible beyond that and
  * relies on many newer functions and markup changes introduced in 4.7.
  *
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Twenty Seventeen Oops! back compat functionality.
+ * CCDzen back compat functionality.
  *
  * @since  1.0.0
  * @access public
@@ -56,7 +56,7 @@ final class Oops_Back_Compat {
 	 */
 	private function __construct() {
 
-		// Prevent switching to Twenty Seventeen Oops! on old versions of WordPress.
+		// Prevent switching to CCDzen on old versions of WordPress.
 		add_action( 'after_switch_theme', [ $this, 'switch_theme' ] );
 
 		// Prevents the Customizer from being loaded on WordPress versions prior to 4.7.
@@ -68,7 +68,7 @@ final class Oops_Back_Compat {
 	}
 
 	/**
-	 * Prevent switching to Twenty Seventeen Oops! on old versions of WordPress.
+	 * Prevent switching to CCDzen on old versions of WordPress.
 	 *
 	 * Switches to the default theme.
 	 *
@@ -97,7 +97,7 @@ final class Oops_Back_Compat {
 	 */
 	function upgrade_notice() {
 
-		$message = sprintf( __( 'Twenty Seventeen Oops! requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentyseventeen-oops' ), $GLOBALS['wp_version'] );
+		$message = sprintf( __( 'CCDzen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'ccdzen' ), $GLOBALS['wp_version'] );
 		printf( '<div class="error"><p>%s</p></div>', $message );
 
 	}
@@ -113,7 +113,7 @@ final class Oops_Back_Compat {
 	function customize() {
 
 		wp_die(
-			sprintf( __( 'Twenty Seventeen Oops! requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentyseventeen-oops' ), $GLOBALS['wp_version'] ), '', array(
+			sprintf( __( 'CCDzen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'ccdzen' ), $GLOBALS['wp_version'] ), '', array(
 				'back_link' => true,
 			)
 		);
@@ -131,7 +131,7 @@ final class Oops_Back_Compat {
 	function preview() {
 
 		if ( isset( $_GET['preview'] ) ) {
-			wp_die( sprintf( __( 'Twenty Seventeen Oops! requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'twentyseventeen-oops' ), $GLOBALS['wp_version'] ) );
+			wp_die( sprintf( __( 'CCDzen requires at least WordPress version 4.7. You are running version %s. Please upgrade and try again.', 'ccdzen' ), $GLOBALS['wp_version'] ) );
 		}
 
 	}
@@ -145,11 +145,11 @@ final class Oops_Back_Compat {
  * @access public
  * @return object Returns an instance of the class.
  */
-function oops_back_compat() {
+function ccdzen_back_compat() {
 
 	return Oops_Back_Compat::instance();
 
 }
 
 // Run an instance of the class.
-oops_back_compat();
+ccdzen_back_compat();

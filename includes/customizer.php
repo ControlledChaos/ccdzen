@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Seventeen Oops! Customizer.
+ * CCDzen Customizer.
  *
  * @package    WordPress
  * @subpackage Twenty_Seventeen_Oops
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Twenty Seventeen Oops! Customizer.
+ * CCDzen Customizer.
  *
  * @since  1.0.0
  * @access public
@@ -90,11 +90,11 @@ class Oops_Customizer {
 		$wp_customize->add_control(
 			'colorscheme', [
 				'type'     => 'radio',
-				'label'    => __( 'Color Scheme', 'twentyseventeen-oops' ),
+				'label'    => __( 'Color Scheme', 'ccdzen' ),
 				'choices'  => [
-					'light'  => __( 'Light', 'twentyseventeen-oops' ),
-					'dark'   => __( 'Dark', 'twentyseventeen-oops' ),
-					'custom' => __( 'Custom', 'twentyseventeen-oops' ),
+					'light'  => __( 'Light', 'ccdzen' ),
+					'dark'   => __( 'Dark', 'ccdzen' ),
+					'custom' => __( 'Custom', 'ccdzen' ),
 				],
 				'section'  => 'colors',
 				'priority' => 5,
@@ -116,7 +116,7 @@ class Oops_Customizer {
 		 */
 		$wp_customize->add_section(
 			'theme_options', [
-				'title'    => __( 'Theme Options', 'twentyseventeen-oops' ),
+				'title'    => __( 'Theme Options', 'ccdzen' ),
 				'priority' => 130, // Before Additional CSS.
 			]
 		);
@@ -131,13 +131,13 @@ class Oops_Customizer {
 
 		$wp_customize->add_control(
 			'page_layout', [
-				'label'           => __( 'Page Layout', 'twentyseventeen-oops' ),
+				'label'           => __( 'Page Layout', 'ccdzen' ),
 				'section'         => 'theme_options',
 				'type'            => 'radio',
-				'description'     => __( 'When the two-column layout is assigned, the page title is in one column and content is in the other.', 'twentyseventeen-oops' ),
+				'description'     => __( 'When the two-column layout is assigned, the page title is in one column and content is in the other.', 'ccdzen' ),
 				'choices'         => [
-					'one-column' => __( 'One Column', 'twentyseventeen-oops' ),
-					'two-column' => __( 'Two Column', 'twentyseventeen-oops' ),
+					'one-column' => __( 'One Column', 'ccdzen' ),
+					'two-column' => __( 'Two Column', 'ccdzen' ),
 				],
 				'active_callback' => [ $this, 'is_view_with_layout_option' ],
 			]
@@ -158,11 +158,11 @@ class Oops_Customizer {
 			'front_page_featured_image', [
 				'section'     => 'theme_options',
 				'type'        => 'radio',
-				'label'       => __( 'Front Page Featured Image', 'twentyseventeen-oops' ),
-				'description' => __( 'Display the featured image from page used as a static front page?', 'twentyseventeen-oops' ),
+				'label'       => __( 'Front Page Featured Image', 'ccdzen' ),
+				'description' => __( 'Display the featured image from page used as a static front page?', 'ccdzen' ),
 				'choices'     => [
-					'no'  => __( 'No', 'twentyseventeen-oops' ),
-					'yes' => __( 'Yes', 'twentyseventeen-oops' ),
+					'no'  => __( 'No', 'ccdzen' ),
+					'yes' => __( 'Yes', 'ccdzen' ),
 				],
 			]
 		);
@@ -179,11 +179,11 @@ class Oops_Customizer {
 			'front_panel_featured_images', [
 				'section'     => 'theme_options',
 				'type'        => 'radio',
-				'label'       => __( 'Front Page Featured Images', 'twentyseventeen-oops' ),
-				'description' => __( 'Display featured images from pages used in front page panels?', 'twentyseventeen-oops' ),
+				'label'       => __( 'Front Page Featured Images', 'ccdzen' ),
+				'description' => __( 'Display featured images from pages used in front page panels?', 'ccdzen' ),
 				'choices'     => [
-					'no'  => __( 'No', 'twentyseventeen-oops' ),
-					'yes' => __( 'Yes', 'twentyseventeen-oops' ),
+					'no'  => __( 'No', 'ccdzen' ),
+					'yes' => __( 'Yes', 'ccdzen' ),
 				]
 			]
 		);
@@ -200,21 +200,21 @@ class Oops_Customizer {
 			'front_panel_number', [
 				'section'     => 'theme_options',
 				'type'        => 'select',
-				'label'       => __( 'Number of Panels', 'twentyseventeen-oops' ),
-				'description' => __( 'Select the maximum number of panels allowed on the front page.', 'twentyseventeen-oops' ),
+				'label'       => __( 'Number of Panels', 'ccdzen' ),
+				'description' => __( 'Select the maximum number of panels allowed on the front page.', 'ccdzen' ),
 				'choices'     => [
-					'1'  => __( 'One', 'twentyseventeen-oops' ),
-					'2'  => __( 'Two', 'twentyseventeen-oops' ),
-					'3'  => __( 'Three', 'twentyseventeen-oops' ),
-					'4'  => __( 'Four', 'twentyseventeen-oops' ),
-					'5'  => __( 'Five', 'twentyseventeen-oops' ),
-					'6'  => __( 'Six', 'twentyseventeen-oops' ),
-					'7'  => __( 'Seven', 'twentyseventeen-oops' ),
-					'8'  => __( 'Eight', 'twentyseventeen-oops' ),
-					'9'  => __( 'Nine', 'twentyseventeen-oops' ),
-					'10' => __( 'Ten', 'twentyseventeen-oops' ),
-					'11' => __( 'Eleven', 'twentyseventeen-oops' ),
-					'12' => __( 'Twelve', 'twentyseventeen-oops' ),
+					'1'  => __( 'One', 'ccdzen' ),
+					'2'  => __( 'Two', 'ccdzen' ),
+					'3'  => __( 'Three', 'ccdzen' ),
+					'4'  => __( 'Four', 'ccdzen' ),
+					'5'  => __( 'Five', 'ccdzen' ),
+					'6'  => __( 'Six', 'ccdzen' ),
+					'7'  => __( 'Seven', 'ccdzen' ),
+					'8'  => __( 'Eight', 'ccdzen' ),
+					'9'  => __( 'Nine', 'ccdzen' ),
+					'10' => __( 'Ten', 'ccdzen' ),
+					'11' => __( 'Eleven', 'ccdzen' ),
+					'12' => __( 'Twelve', 'ccdzen' ),
 				]
 			]
 		);
@@ -229,7 +229,7 @@ class Oops_Customizer {
 		 */
 		$input        = '';
 		$num_sections = $this->sanitize_front_panel_number( get_theme_mod( 'front_panel_number' ) );
-		$sections     = apply_filters( 'oops_front_page_sections', $num_sections );
+		$sections     = apply_filters( 'ccdzen_front_page_sections', $num_sections );
 
 		// Create a setting and control for each of the sections available in the theme.
 		for ( $i = 1; $i < ( 1 + $sections ); $i++ ) {
@@ -244,8 +244,8 @@ class Oops_Customizer {
 			$wp_customize->add_control(
 				'panel_' . $i, [
 					/* translators: %d is the front page section number */
-					'label'           => sprintf( __( 'Front Page Section %d Content', 'twentyseventeen-oops' ), $i ),
-					'description'     => ( 1 !== $i ? '' : __( 'Select pages to feature in each area from the dropdowns. Add an image to a section by setting a featured image in the page editor. Empty sections will not be displayed.', 'twentyseventeen-oops' ) ),
+					'label'           => sprintf( __( 'Front Page Section %d Content', 'ccdzen' ), $i ),
+					'description'     => ( 1 !== $i ? '' : __( 'Select pages to feature in each area from the dropdowns. Add an image to a section by setting a featured image in the page editor. Empty sections will not be displayed.', 'ccdzen' ) ),
 					'section'         => 'theme_options',
 					'type'            => 'dropdown-pages',
 					'allow_addition'  => true,
@@ -275,8 +275,8 @@ class Oops_Customizer {
 	public static function sanitize_page_layout( $input ) {
 
 		$valid = [
-			'one-column' => __( 'One Column', 'twentyseventeen-oops' ),
-			'two-column' => __( 'Two Column', 'twentyseventeen-oops' ),
+			'one-column' => __( 'One Column', 'ccdzen' ),
+			'two-column' => __( 'Two Column', 'ccdzen' ),
 		];
 
 		if ( array_key_exists( $input, $valid ) ) {
@@ -453,7 +453,7 @@ class Oops_Customizer {
 	 */
 	public function customize_preview_js() {
 
-		wp_enqueue_script( 'oops-customize-preview', get_theme_file_uri( '/assets/js/customize-preview.js' ), [ 'customize-preview' ], '1.0', true );
+		wp_enqueue_script( 'ccdzen-customize-preview', get_theme_file_uri( '/assets/js/customize-preview.js' ), [ 'customize-preview' ], '1.0', true );
 
 	}
 
@@ -466,11 +466,11 @@ class Oops_Customizer {
 	 */
 	public function panels_js() {
 
-		wp_enqueue_script( 'oops-customize-controls', get_theme_file_uri( '/assets/js/customize-controls.js' ), [], '1.0', true );
+		wp_enqueue_script( 'ccdzen-customize-controls', get_theme_file_uri( '/assets/js/customize-controls.js' ), [], '1.0', true );
 
 	}
 
 }
 
 // Run an instance of the class.
-$oops_customizer = new Oops_Customizer();
+$ccdzen_customizer = new Oops_Customizer();

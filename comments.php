@@ -34,7 +34,7 @@ if ( post_password_required() ) {
 			$comments_number = get_comments_number();
 			if ( '1' === $comments_number ) {
 				/* translators: %s: post title */
-				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'twentyseventeen-oops' ), get_the_title() );
+				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'ccdzen' ), get_the_title() );
 			} else {
 				printf(
 					/* translators: 1: number of comments, 2: post title */
@@ -43,7 +43,7 @@ if ( post_password_required() ) {
 						'%1$s Replies to &ldquo;%2$s&rdquo;',
 						$comments_number,
 						'comments title',
-						'twentyseventeen-oops'
+						'ccdzen'
 					),
 					number_format_i18n( $comments_number ),
 					get_the_title()
@@ -59,7 +59,7 @@ if ( post_password_required() ) {
 						'avatar_size' => 100,
 						'style'       => 'ol',
 						'short_ping'  => true,
-						'reply_text'  => Oops_Icons::get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'twentyseventeen-oops' ),
+						'reply_text'  => Oops_Icons::get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'ccdzen' ),
 					)
 				);
 			?>
@@ -68,8 +68,8 @@ if ( post_password_required() ) {
 		<?php
 		the_comments_pagination(
 			array(
-				'prev_text' => Oops_Icons::get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'twentyseventeen-oops' ) . '</span>',
-				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'twentyseventeen-oops' ) . '</span>' . Oops_Icons::get_svg( array( 'icon' => 'arrow-right' ) ),
+				'prev_text' => Oops_Icons::get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'ccdzen' ) . '</span>',
+				'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'ccdzen' ) . '</span>' . Oops_Icons::get_svg( array( 'icon' => 'arrow-right' ) ),
 			)
 		);
 
@@ -79,7 +79,7 @@ if ( post_password_required() ) {
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
 
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyseventeen-oops' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'ccdzen' ); ?></p>
 	<?php
 	endif;
 

@@ -15,7 +15,7 @@
 		the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 	}
 	?>
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentyseventeen-oops' ) ); ?>" class="imprint">
-		<?php printf( __( 'Proudly powered by %s', 'twentyseventeen-oops' ), 'WordPress' ); ?>
+	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ccdzen' ) ); ?>" class="imprint">
+		<?php printf( __( 'Proudly powered by %s', 'ccdzen' ), 'WordPress' ); ?>
 	</a>
 </div><!-- .site-info -->

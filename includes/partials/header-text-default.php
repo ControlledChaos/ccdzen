@@ -10,7 +10,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } ?>
-<style id="oops-custom-header-styles" type="text/css">
+<style id="ccdzen-custom-header-styles" type="text/css">
 .site-title,
 .site-description {
 	position: absolute;

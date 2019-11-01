@@ -40,16 +40,16 @@ get_header(); ?>
 			 *
 			 * @param int $num_sections Number of front page sections.
 			 */
-			$num_sections = apply_filters( 'oops_front_page_sections', 4 );
-			global $twentyseventeencounter;
+			$num_sections = apply_filters( 'ccdzen_front_page_sections', 4 );
+			global $ccdzencounter;
 
 			// Create a setting and control for each of the sections available in the theme.
 			for ( $i = 1; $i < ( 1 + $num_sections ); $i++ ) {
-				$twentyseventeencounter = $i;
+				$ccdzencounter = $i;
 				Oops_Tags::front_page_section( null, $i );
 			}
 
-	endif; // The if ( 0 !== twentyseventeen_panel_count() ) ends here.
+	endif; // The if ( 0 !== ccdzen_panel_count() ) ends here.
 	?>
 
 	</main><!-- #main -->

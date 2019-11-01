@@ -1,10 +1,10 @@
 <?php
 /**
- * Twenty Seventeen Oops! functions and definitions.
+ * CCDzen functions and definitions.
  *
  * Based on the Twenty Seventeen theme.
  *
- * @link       https://wordpress.org/themes/twentyseventeen/
+ * @link       https://wordpress.org/themes/ccdzen/
  *
  * @package    WordPress
  * @subpackage Twenty_Seventeen_Oops
@@ -15,18 +15,18 @@
  */
 
 /*
-Twenty Seventeen Oops! is free software: you can redistribute it and/or modify
+CCDzen is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 2 of the License, or
 any later version.
 
-Twenty Seventeen Oops! is distributed in the hope that it will be useful,
+CCDzen is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with Twenty Seventeen Oops!. If not, see {URI to Plugin License}.
+along with CCDzen. If not, see {URI to Plugin License}.
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -43,7 +43,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 
 /**
- * Twenty Seventeen Oops! functions and definitions.
+ * CCDzen functions and definitions.
  *
  * @since  1.0.0
  * @access public
@@ -166,7 +166,7 @@ final class Oops_Functions {
 	public function __clone() {
 
 		// Cloning instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, __( 'This is not allowed.', 'twentyseventeen-oops' ), OOPS_VERSION );
+		_doing_it_wrong( __FUNCTION__, __( 'This is not allowed.', 'ccdzen' ), OOPS_VERSION );
 
 	}
 
@@ -180,7 +180,7 @@ final class Oops_Functions {
 	public function __wakeup() {
 
 		// Unserializing instances of the class is forbidden.
-		_doing_it_wrong( __FUNCTION__, __( 'This is not allowed.', 'twentyseventeen-oops' ), OOPS_VERSION );
+		_doing_it_wrong( __FUNCTION__, __( 'This is not allowed.', 'ccdzen' ), OOPS_VERSION );
 
 	}
 
@@ -239,7 +239,7 @@ final class Oops_Functions {
 		/**
 		 * Make theme available for translation.
 		 */
-		load_theme_textdomain( 'twentyseventeen-oops' );
+		load_theme_textdomain( 'ccdzen' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -257,9 +257,9 @@ final class Oops_Functions {
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		add_image_size( 'twentyseventeen-featured-image', 2000, 1200, true );
+		add_image_size( 'ccdzen-featured-image', 2000, 1200, true );
 
-		add_image_size( 'twentyseventeen-thumbnail-avatar', 100, 100, true );
+		add_image_size( 'ccdzen-thumbnail-avatar', 100, 100, true );
 
 		// Set the default content width.
 		$GLOBALS['content_width'] = 525;
@@ -267,8 +267,8 @@ final class Oops_Functions {
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			[
-				'top'    => __( 'Top Menu', 'twentyseventeen-oops' ),
-				'social' => __( 'Social Links Menu', 'twentyseventeen-oops' ),
+				'top'    => __( 'Top Menu', 'ccdzen' ),
+				'social' => __( 'Social Links Menu', 'ccdzen' ),
 			]
 		);
 
@@ -325,44 +325,44 @@ final class Oops_Functions {
 		 */
 		$color_args = [
 			[
-				'name'  => __( 'White', 'controlled-chaos' ),
-				'slug'  => 'oops-white',
+				'name'  => __( 'White', 'ccdzen' ),
+				'slug'  => 'ccdzen-white',
 				'color' => '#fff',
 			],
 			[
-				'name'  => __( 'Light Gray', 'controlled-chaos' ),
-				'slug'  => 'oops-wp-gray',
+				'name'  => __( 'Light Gray', 'ccdzen' ),
+				'slug'  => 'ccdzen-wp-gray',
 				'color' => '#cccccc',
 			],
 			[
-				'name'  => __( 'Medium Gray', 'controlled-chaos' ),
-				'slug'  => 'oops-wp-gray',
+				'name'  => __( 'Medium Gray', 'ccdzen' ),
+				'slug'  => 'ccdzen-wp-gray',
 				'color' => '#888888',
 			],
 			[
-				'name'  => __( 'Dark Gray', 'controlled-chaos' ),
-				'slug'  => 'oops-wp-gray',
+				'name'  => __( 'Dark Gray', 'ccdzen' ),
+				'slug'  => 'ccdzen-wp-gray',
 				'color' => '#222222',
 			],
 			[
-				'name'  => __( 'Success Green', 'controlled-chaos' ),
-				'slug'  => 'oops-wp-light-blue',
+				'name'  => __( 'Success Green', 'ccdzen' ),
+				'slug'  => 'ccdzen-wp-light-blue',
 				'color' => '#46b450',
 			],
 			[
-				'name'  => __( 'Error Red', 'controlled-chaos' ),
-				'slug'  => 'oops-wp-light-blue',
+				'name'  => __( 'Error Red', 'ccdzen' ),
+				'slug'  => 'ccdzen-wp-light-blue',
 				'color' => '#dc3232',
 			],
 			[
-				'name'  => __( 'Warning Yellow', 'controlled-chaos' ),
-				'slug'  => 'oops-wp-light-blue',
+				'name'  => __( 'Warning Yellow', 'ccdzen' ),
+				'slug'  => 'ccdzen-wp-light-blue',
 				'color' => '#ffb900',
 			]
 		];
 
 		// Apply a filter to editor arguments.
-		$colors = apply_filters( 'oops_editor_colors', $color_args );
+		$colors = apply_filters( 'ccdzen_editor_colors', $color_args );
 
 		// Add color support.
 		add_theme_support( 'editor-color-palette', $colors );
@@ -424,15 +424,15 @@ final class Oops_Functions {
 			// Create the custom image attachments used as post thumbnails for pages.
 			'attachments' => [
 				'image-espresso' => [
-					'post_title' => _x( 'Espresso', 'Theme starter content', 'twentyseventeen-oops' ),
+					'post_title' => _x( 'Espresso', 'Theme starter content', 'ccdzen' ),
 					'file'       => 'assets/images/espresso.jpg', // URL relative to the template directory.
 				],
 				'image-sandwich' => [
-					'post_title' => _x( 'Sandwich', 'Theme starter content', 'twentyseventeen-oops' ),
+					'post_title' => _x( 'Sandwich', 'Theme starter content', 'ccdzen' ),
 					'file'       => 'assets/images/sandwich.jpg',
 				],
 				'image-coffee'   => [
-					'post_title' => _x( 'Coffee', 'Theme starter content', 'twentyseventeen-oops' ),
+					'post_title' => _x( 'Coffee', 'Theme starter content', 'ccdzen' ),
 					'file'       => 'assets/images/coffee.jpg',
 				],
 			],
@@ -456,7 +456,7 @@ final class Oops_Functions {
 			'nav_menus'   => [
 				// Assign a menu to the "top" location.
 				'top'    => [
-					'name'  => __( 'Top Menu', 'twentyseventeen-oops' ),
+					'name'  => __( 'Top Menu', 'ccdzen' ),
 					'items' => [
 						'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
 						'page_about',
@@ -467,7 +467,7 @@ final class Oops_Functions {
 
 				// Assign a menu to the "social" location.
 				'social' => [
-					'name'  => __( 'Social Links Menu', 'twentyseventeen-oops' ),
+					'name'  => __( 'Social Links Menu', 'ccdzen' ),
 					'items' => [
 						'link_yelp',
 						'link_facebook',
@@ -485,7 +485,7 @@ final class Oops_Functions {
 		 * @since  1.0.0
 		 * @param array $starter_content Array of starter content.
 		 */
-		$starter_content = apply_filters( 'twentyseventeen_starter_content', $starter_content );
+		$starter_content = apply_filters( 'ccdzen_starter_content', $starter_content );
 
 		add_theme_support( 'starter-content', $starter_content );
 
@@ -528,7 +528,7 @@ final class Oops_Functions {
 		 * @access public
 		 * @param int $content_width Content width in pixels.
 		 */
-		$GLOBALS['content_width'] = apply_filters( 'twentyseventeen_content_width', $content_width );
+		$GLOBALS['content_width'] = apply_filters( 'ccdzen_content_width', $content_width );
 
 	}
 
@@ -548,7 +548,7 @@ final class Oops_Functions {
 		 * supported by Libre Franklin, translate this to 'off'. Do not translate
 		 * into your own language.
 		 */
-		$libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'twentyseventeen-oops' );
+		$libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'ccdzen' );
 
 		if ( 'off' !== $libre_franklin ) {
 			$font_families = [];
@@ -578,7 +578,7 @@ final class Oops_Functions {
 	 */
 	function resource_hints( $urls, $relation_type ) {
 
-		if ( wp_style_is( 'oops-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+		if ( wp_style_is( 'ccdzen-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
 			$urls[] = [
 				'href' => 'https://fonts.gstatic.com',
 				'crossorigin',
@@ -599,9 +599,9 @@ final class Oops_Functions {
 	function widgets_init() {
 		register_sidebar(
 			[
-				'name'          => __( 'Blog Sidebar', 'twentyseventeen-oops' ),
+				'name'          => __( 'Blog Sidebar', 'ccdzen' ),
 				'id'            => 'sidebar-1',
-				'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'twentyseventeen-oops' ),
+				'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'ccdzen' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h2 class="widget-title">',
@@ -611,9 +611,9 @@ final class Oops_Functions {
 
 		register_sidebar(
 			[
-				'name'          => __( 'Footer 1', 'twentyseventeen-oops' ),
+				'name'          => __( 'Footer 1', 'ccdzen' ),
 				'id'            => 'sidebar-2',
-				'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen-oops' ),
+				'description'   => __( 'Add widgets here to appear in your footer.', 'ccdzen' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h2 class="widget-title">',
@@ -623,9 +623,9 @@ final class Oops_Functions {
 
 		register_sidebar(
 			[
-				'name'          => __( 'Footer 2', 'twentyseventeen-oops' ),
+				'name'          => __( 'Footer 2', 'ccdzen' ),
 				'id'            => 'sidebar-3',
-				'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen-oops' ),
+				'description'   => __( 'Add widgets here to appear in your footer.', 'ccdzen' ),
 				'before_widget' => '<section id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</section>',
 				'before_title'  => '<h2 class="widget-title">',
@@ -687,41 +687,41 @@ final class Oops_Functions {
 	function enqueue_scripts() {
 
 		// Add custom fonts, used in the main stylesheet.
-		wp_enqueue_style( 'oops-fonts', $this::fonts_url(), [], null );
+		wp_enqueue_style( 'ccdzen-fonts', $this::fonts_url(), [], null );
 
 		// Theme stylesheet.
-		wp_enqueue_style( 'oops-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'ccdzen-style', get_stylesheet_uri() );
 
 		// Load the dark colorscheme.
 		if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
-			wp_enqueue_style( 'oops-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), [ 'oops-style' ], '1.0' );
+			wp_enqueue_style( 'ccdzen-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), [ 'ccdzen-style' ], '1.0' );
 		}
 
 		// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 		if ( is_customize_preview() ) {
-			wp_enqueue_style( 'oops-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), [ 'oops-style' ], '1.0' );
-			wp_style_add_data( 'oops-ie9', 'conditional', 'IE 9' );
+			wp_enqueue_style( 'ccdzen-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), [ 'ccdzen-style' ], '1.0' );
+			wp_style_add_data( 'ccdzen-ie9', 'conditional', 'IE 9' );
 		}
 
 		// Load the Internet Explorer 8 specific stylesheet.
-		wp_enqueue_style( 'oops-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), [ 'oops-style' ], '1.0' );
-		wp_style_add_data( 'oops-ie8', 'conditional', 'lt IE 9' );
+		wp_enqueue_style( 'ccdzen-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), [ 'ccdzen-style' ], '1.0' );
+		wp_style_add_data( 'ccdzen-ie8', 'conditional', 'lt IE 9' );
 
 		// Load the html5 shiv.
 		wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), [], '3.7.3' );
 		wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
-		wp_enqueue_script( 'oops-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), [], '1.0', true );
+		wp_enqueue_script( 'ccdzen-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), [], '1.0', true );
 
-		$twentyseventeen_l10n = [
+		$ccdzen_l10n = [
 			'quote' => Oops_Icons::get_svg( [ 'icon' => 'quote-right' ] ),
 		];
 
 		if ( has_nav_menu( 'top' ) ) {
-			wp_enqueue_script( 'oops-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), [ 'jquery' ], '1.0', true );
-			$twentyseventeen_l10n['expand']   = __( 'Expand child menu', 'twentyseventeen-oops' );
-			$twentyseventeen_l10n['collapse'] = __( 'Collapse child menu', 'twentyseventeen-oops' );
-			$twentyseventeen_l10n['icon']     = Oops_Icons::get_svg(
+			wp_enqueue_script( 'ccdzen-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), [ 'jquery' ], '1.0', true );
+			$ccdzen_l10n['expand']   = __( 'Expand child menu', 'ccdzen' );
+			$ccdzen_l10n['collapse'] = __( 'Collapse child menu', 'ccdzen' );
+			$ccdzen_l10n['icon']     = Oops_Icons::get_svg(
 				[
 					'icon'     => 'angle-down',
 					'fallback' => true,
@@ -729,11 +729,11 @@ final class Oops_Functions {
 			);
 		}
 
-		wp_enqueue_script( 'oops-global', get_theme_file_uri( '/assets/js/global.js' ), [ 'jquery' ], '1.0', true );
+		wp_enqueue_script( 'ccdzen-global', get_theme_file_uri( '/assets/js/global.js' ), [ 'jquery' ], '1.0', true );
 
 		wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), [ 'jquery' ], '2.1.2', true );
 
-		wp_localize_script( 'oops-skip-link-focus-fix', 'twentyseventeenScreenReaderText', $twentyseventeen_l10n );
+		wp_localize_script( 'ccdzen-skip-link-focus-fix', 'ccdzenScreenReaderText', $ccdzen_l10n );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -775,7 +775,7 @@ final class Oops_Functions {
 			'<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
 			esc_url( get_permalink( get_the_ID() ) ),
 			/* translators: %s: Name of current post */
-			sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen-oops' ), get_the_title( get_the_ID() ) )
+			sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ccdzen' ), get_the_title( get_the_ID() ) )
 		);
 
 		return ' &hellip; ' . $link;
@@ -903,11 +903,11 @@ final class Oops_Functions {
  * @access public
  * @return object Returns an instance of the class.
  */
-function oops_functions() {
+function ccdzen_functions() {
 
 	return Oops_Functions::instance();
 
 }
 
 // Run an instance of the class.
-oops_functions();
+ccdzen_functions();

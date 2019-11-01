@@ -85,12 +85,12 @@ final class Oops_Templates {
 
 		// Add class if we're viewing the Customizer for easier styling of theme options.
 		if ( is_customize_preview() ) {
-			$classes[] = 'twentyseventeen-customizer';
+			$classes[] = 'ccdzen-customizer';
 		}
 
 		// Add class on front page.
 		if ( is_front_page() && 'posts' !== get_option( 'show_on_front' ) ) {
-			$classes[] = 'twentyseventeen-front-page';
+			$classes[] = 'ccdzen-front-page';
 		}
 
 		// Add a class if there is a custom header.
@@ -145,7 +145,7 @@ final class Oops_Templates {
 		 *
 		 * @param int $num_sections Number of front page sections.
 		 */
-		$num_sections = apply_filters( 'oops_front_page_sections', 4 );
+		$num_sections = apply_filters( 'ccdzen_front_page_sections', 4 );
 
 		// Create a setting and control for each of the sections available in the theme.
 		for ( $i = 1; $i < ( 1 + $num_sections ); $i++ ) {
@@ -180,11 +180,11 @@ final class Oops_Templates {
  * @access public
  * @return object Returns an instance of the class.
  */
-function oops_templates() {
+function ccdzen_templates() {
 
 	return Oops_Templates::instance();
 
 }
 
 // Run an instance of the class.
-oops_templates();
+ccdzen_templates();

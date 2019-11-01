@@ -1,6 +1,6 @@
 <?php
 /**
- * Twenty Seventeen Oops! color patterns.
+ * CCDzen color patterns.
  *
  * @package    WordPress
  * @subpackage Twenty_Seventeen_Oops
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Twenty Seventeen Oops! back compat functionality.
+ * CCDzen back compat functionality.
  *
  * @since  1.0.0
  * @access public
@@ -46,7 +46,7 @@ class Oops_Color_Patterns {
 		 * @since 1.0.0
 		 * @param int $saturation Color saturation level.
 		 */
-		$saturation         = absint( apply_filters( 'oops_custom_colors_saturation', 50 ) );
+		$saturation         = absint( apply_filters( 'ccdzen_custom_colors_saturation', 50 ) );
 		$reduced_saturation = ( .8 * $saturation ) . '%';
 		$saturation         = $saturation . '%';
 		$css                = '
@@ -164,7 +164,7 @@ class Oops_Color_Patterns {
 .colors-custom .menu-toggle,
 .colors-custom .page .panel-content .entry-title,
 .colors-custom .page-title,
-.colors-custom.page:not(.twentyseventeen-front-page) .entry-title,
+.colors-custom.page:not(.ccdzen-front-page) .entry-title,
 .colors-custom .page-links a .page-number,
 .colors-custom .comment-metadata a.comment-edit-link,
 .colors-custom .comment-reply-link .icon,
@@ -173,7 +173,7 @@ class Oops_Color_Patterns {
 .colors-custom .post-navigation a:focus .icon,
 .colors-custom .post-navigation a:hover .icon,
 .colors-custom .site-content .site-content-light,
-.colors-custom .twentyseventeen-panel .recent-posts .entry-header .edit-link {
+.colors-custom .ccdzen-panel .recent-posts .entry-header .edit-link {
 	color: hsl( ' . $hue . ', ' . $saturation . ', 13% ); /* base: #222; */
 }
 
@@ -245,7 +245,7 @@ body.colors-custom,
 .colors-custom h6,
 .colors-custom label,
 .colors-custom .entry-title a,
-.colors-custom.twentyseventeen-front-page .panel-content .recent-posts article,
+.colors-custom.ccdzen-front-page .panel-content .recent-posts article,
 .colors-custom .entry-footer .cat-links a,
 .colors-custom .entry-footer .tags-links a,
 .colors-custom .format-quote blockquote,
@@ -417,7 +417,7 @@ body.colors-custom,
 	border-color: hsl( ' . $hue . ', ' . $saturation . ', 87% ); /* base: #ddd; */
 }
 
-.colors-custom.twentyseventeen-front-page article:not(.has-post-thumbnail):not(:first-child),
+.colors-custom.ccdzen-front-page article:not(.has-post-thumbnail):not(:first-child),
 .colors-custom .widget ul li {
 	border-top-color: hsl( ' . $hue . ', ' . $saturation . ', 87% ); /* base: #ddd; */
 }
@@ -608,4 +608,4 @@ body.colors-custom,
 }
 
 // Run an instance of the class.
-$oops_color_patterns = new Oops_Color_Patterns();
+$ccdzen_color_patterns = new Oops_Color_Patterns();

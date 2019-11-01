@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Get the custom header text color from the Customizer.
 $header_text_color = get_header_textcolor(); ?>
-<style id="oops-custom-header-styles" type="text/css">
+<style id="ccdzen-custom-header-styles" type="text/css">
 .site-title a,
 .colors-dark .site-title a,
 .colors-custom .site-title a,

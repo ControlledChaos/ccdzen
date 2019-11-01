@@ -9,11 +9,11 @@
  */
 
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'ccdzen-panel ' ); ?> >
 
 	<?php
 	if ( has_post_thumbnail() && 'yes' == Oops_Customizer::sanitize_front_page_featured_image( get_theme_mod( 'front_page_featured_image' ) ) ) :
-		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'twentyseventeen-featured-image' );
+		$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'ccdzen-featured-image' );
 
 		// Calculate aspect ratio: h / w * 100%.
 		$ratio = $thumbnail[2] / $thumbnail[1] * 100;
@@ -39,7 +39,7 @@
 					/* translators: %s: Name of current post */
 					the_content(
 						sprintf(
-							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentyseventeen-oops' ),
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ccdzen' ),
 							get_the_title()
 						)
 					);
