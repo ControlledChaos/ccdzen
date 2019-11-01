@@ -18,4 +18,4 @@ A WordPress-compatible display & management system for the Controlled Chaos Desi
 
 ## Use, Distribution & Modification
 
-This product provides no license. This product, including images, graphical vector instructions, documentation, and any works not described here, are released for public consumption ad libitum, ad infinitum. Please read the DISCLAIMER file included in the theme root directory.
+This product provides no license. This product, including images, graphical vector instructions, documentation, and any works not described here, are released for public consumption ad libitum, ad infinitum. Please read the DISCLAIMER file included in This product's root directory.
