@@ -5,7 +5,7 @@
  * Contains the closing of the #content div and all content after.
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen_Oops
+ * @subpackage CCDzen
  * @since 1.0
  * @version 1.2
  */

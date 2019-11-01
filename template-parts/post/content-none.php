@@ -3,7 +3,7 @@
  * Template part for displaying a message that posts cannot be found
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen_Oops
+ * @subpackage CCDzen
  * @since 1.0
  * @version 1.0
  */

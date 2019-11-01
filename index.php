@@ -8,7 +8,7 @@
  * E.g., it puts together the home page when no home.php file exists.
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen_Oops
+ * @subpackage CCDzen
  * @since 1.0
  * @version 1.0
  */

@@ -5,7 +5,7 @@
  * Based on the CCDzen theme.
  *
  * @package    WordPress
- * @subpackage Twenty_Seventeen_Oops
+ * @subpackage CCDzen
  * @since      1.0.0
  *
  * @todo       Rename this when development is further along.

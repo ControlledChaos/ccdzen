@@ -3,7 +3,7 @@
  * Custom header implementation.
  *
  * @package    WordPress
- * @subpackage Twenty_Seventeen_Oops
+ * @subpackage CCDzen
  * @since      1.0.0
  */
 

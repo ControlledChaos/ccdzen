@@ -3,7 +3,7 @@
  * CCDzen color patterns.
  *
  * @package    WordPress
- * @subpackage Twenty_Seventeen_Oops
+ * @subpackage CCDzen
  * @since      1.0.0
  */
 

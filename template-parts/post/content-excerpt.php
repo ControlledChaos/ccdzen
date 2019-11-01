@@ -5,7 +5,7 @@
  * Used in Search Results and for Recent Posts in Front Page panels.
  *
  * @package WordPress
- * @subpackage Twenty_Seventeen_Oops
+ * @subpackage CCDzen
  * @since 1.0
  * @version 1.2
  */
