@@ -139,9 +139,9 @@ final class Oops_Templates {
 		$panel_count = 0;
 
 		/**
-		 * Filter number of front page sections in Twenty Seventeen.
+		 * Filter number of front page sections in CCDzen.
 		 *
-		 * @since Twenty Seventeen 1.0
+		 * @since CCDzen 1.0
 		 *
 		 * @param int $num_sections Number of front page sections.
 		 */

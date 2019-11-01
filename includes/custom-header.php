@@ -70,7 +70,7 @@ final class Oops_Custom_Header {
 	public function custom_header_setup() {
 
 		/**
-		 * Filter Twenty Seventeen custom-header support arguments.
+		 * Filter CCDzen custom-header support arguments.
 		 *
 		 * @since  1.0.0
 		 * @param array $args {

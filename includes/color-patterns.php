@@ -41,7 +41,7 @@ class Oops_Color_Patterns {
 		$hue = absint( get_theme_mod( 'colorscheme_hue', 250 ) );
 
 		/**
-		 * Filter Twenty Seventeen default saturation level.
+		 * Filter CCDzen default saturation level.
 		 *
 		 * @since 1.0.0
 		 * @param int $saturation Color saturation level.
@@ -51,7 +51,7 @@ class Oops_Color_Patterns {
 		$saturation         = $saturation . '%';
 		$css                = '
 /**
- * Twenty Seventeen: Color Patterns
+ * CCDzen: Color Patterns
  *
  * Colors are ordered from dark to light.
  */
@@ -594,7 +594,7 @@ body.colors-custom,
 }';
 
 		/**
-		 * Filters Twenty Seventeen custom colors CSS.
+		 * Filters CCDzen custom colors CSS.
 		 *
 		 * @since  1.0.0
 		 * @param string $css        Base theme colors CSS.

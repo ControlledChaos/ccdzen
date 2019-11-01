@@ -220,7 +220,7 @@ class Oops_Customizer {
 		);
 
 		/**
-		 * Filter number of front page sections in Twenty Seventeen.
+		 * Filter number of front page sections in CCDzen.
 		 *
 		 * @since  1.0.0
 		 * @access public

@@ -2,7 +2,7 @@
 /**
  * CCDzen functions and definitions.
  *
- * Based on the Twenty Seventeen theme.
+ * Based on the CCDzen theme.
  *
  * @link       https://wordpress.org/themes/ccdzen/
  *
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Twenty Seventeen only works in WordPress 4.7 or later.
+// CCDzen only works in WordPress 4.7 or later.
 if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/includes/back-compat.php';
 	return;
@@ -173,7 +173,7 @@ final class Oops_Functions {
 	 * Load the required dependencies for this plugin.
 	 *
 	 * Uses `get_theme_file_path` instead of `get_theme_file_path`
-	 * as in the Twenty Seventeen theme. This make child-theming easier.
+	 * as in the CCDzen theme. This make child-theming easier.
 	 *
 	 * @since  1.0.0
 	 * @access private
@@ -465,7 +465,7 @@ final class Oops_Functions {
 		];
 
 		/**
-		 * Filters Twenty Seventeen array of starter content.
+		 * Filters CCDzen array of starter content.
 		 *
 		 * @since  1.0.0
 		 * @param array $starter_content Array of starter content.
@@ -508,7 +508,7 @@ final class Oops_Functions {
 		}
 
 		/**
-		 * Filter Twenty Seventeen content width of the theme.
+		 * Filter CCDzen content width of the theme.
 		 *
 		 * @access public
 		 * @param int $content_width Content width in pixels.

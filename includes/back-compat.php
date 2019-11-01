@@ -88,7 +88,7 @@ final class Oops_Back_Compat {
 	 * Adds a message for unsuccessful theme switch.
 	 *
 	 * Prints an update nag after an unsuccessful attempt to switch to
-	 * Twenty Seventeen on WordPress versions prior to 4.7.
+	 * CCDzen on WordPress versions prior to 4.7.
 	 *
 	 * @since  1.0.0
 	 * @access public
