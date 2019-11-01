@@ -4,6 +4,6 @@ This document is a disclaimer of all legalities concerning creative works. I rej
 
 ## Use, Distribution & Modification
 
-This theme, including images, graphical vector instructions, documentation, and any works not described here, are released for public consumption ad libitum, ad infinitum.
+This product provides no license. This product, including images, graphical vector instructions, documentation, and any works not described here, are released for public consumption ad libitum, ad infinitum.
 
-In other words, this theme shall remain available for use, for modification, and for unlimited modification, free of charge, free of regulation, and free of reprisal.
+In other words, this product shall remain available for use, for modification, and for unlimited modification, free of charge, free of regulation, and free of reprisal.
